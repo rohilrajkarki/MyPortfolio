@@ -1,0 +1,97 @@
+.intro{
+    background-color: white;
+    display: flex;
+
+    .left{
+        flex: 0.5;
+        overflow: hidden;
+        position:relative;
+
+        .imgContainer{
+            width: 600;
+            height: 600;
+            background-color: green;
+            border-radius: 80%;
+            display: flex;
+            transform:translate(-50%,-50%);  
+            position:absolute;
+            top:50%;
+            left:50%;
+
+
+
+            .img{
+                height: 100%;
+            }
+        }
+
+    }
+    .right{
+        flex: 0.5;
+        //whenever you use position:absoulte item the parent item should be 
+        // position: relative(p.s done for the arrow here)
+        position: relative;
+
+        .wrapper{
+            width: 100%;
+            height: 100%;
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h1{
+                font-size: 60px;
+                margin: 10px 0; //10 top-bottom and no left-right
+            }
+            h2{
+                font-style: 35px;
+            }
+            h3{
+                font-style: 30px;
+
+                span{
+                    font-style: inherit;
+                    color: crimson;
+                }
+
+                .ityped-cursor {
+                    animation: blink 1s infinite;
+                    font-size: 1.4rem;
+                    // opacity: 1;
+                    // -webkit-animation: blink 0.3s infinite;
+                    // -moz-animation: blink 0.3s infinite;
+                    // animation: blink 0.3s infinite;
+                    // animation-direction: alternate;
+                }
+                @keyframes blink {
+                    //0-50% ko lagi 1 tespaxiko 0
+                    50% {
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: 0;
+                    }
+                }
+            }
+
+        }
+        a{
+            position: absolute;
+            bottom: 10px;
+            left: 40%;;
+
+            .icon{
+                font-size: 50px;
+                animation: arrowBlink 2s infinite;
+            }
+
+            @keyframes arrowBlink {
+                100%{   //to or 100%
+                    opacity: 0;
+                }
+            }
+        }
+
+    }
+}

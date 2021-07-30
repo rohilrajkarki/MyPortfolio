@@ -1,0 +1,30 @@
+.app{
+    height: 100vh;
+    .sections{
+        width: 100%;
+        height: calc(100vh - 70px);//height 100 then overflows
+        background-color: lightsalmon;
+        position: relative;
+        top: 70px;
+
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+
+        // transition: all 3s ease;
+
+        scrollbar-width: none;//for firefox
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        
+
+        
+        >*{// for each element inside
+            width: 100vw;
+            height:calc(100vh - 70px) ;
+
+           scroll-snap-align: start; 
+        }
+    }
+}
